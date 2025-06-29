@@ -4,37 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Tienda Online</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #007bff;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .button:hover {
-            background-color: #218838;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>¡Bienvenido a Mi Tienda Online!</h1>
-    <p>Estamos construyendo algo increíble para ti.</p>
-    <a href="#" class="button">Ver Productos (Próximamente)</a>
+    <body>
+    <header class="top-bar">
+        <p>🚚 Envíos GRATIS en compras superiores a $X.XXX | 🌍 Compras Internacionales</p>
+    </header>
+
+    <nav class="promo-bar">
+        <a href="#" class="promo-link">🔥 DESCUENTOS Y OFERTAS ESPECIALES</a>
+    </nav>
+
+    <header class="main-header">
+        <div class="header-left">
+            <input type="search" placeholder="Buscar productos..." class="search-box">
+            </div>
+        <div class="header-center">
+            <h1 class="store-name">NOMBRE DE TU TIENDA</h1>
+        </div>
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="featured-products">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x250?text=Producto+1" alt="Producto 1">
+                <h3>Producto Destacado 1</h3>
+                <p class="price">$XX.XXX</p>
+                <button class="add-to-cart">Ver Detalles</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x250?text=Producto+2" alt="Producto 2">
+                <h3>Producto Destacado 2</h3>
+                <p class="price">$XX.XXX</p>
+                <button class="add-to-cart">Ver Detalles</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x250?text=Producto+3" alt="Producto 3">
+                <h3>Producto Destacado 3</h3>
+                <p class="price">$XX.XXX</p>
+                <button class="add-to-cart">Ver Detalles</button>
+            </div>
+            </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 NOMBRE DE TU TIENDA. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </body>
 </html>
