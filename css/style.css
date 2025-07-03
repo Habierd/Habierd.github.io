@@ -215,4 +215,13 @@ a:hover {
     .product-grid {
         grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
     }
+
+    /* Estilo para el eslogan */
+.slogan {
+    font-size: 1.1em; /* Un poco más grande que el texto normal */
+    color: #555; /* Un gris más suave que el título */
+    margin-top: 5px; /* Pequeño espacio encima */
+    margin-bottom: 20px; /* Espacio debajo */
+    font-style: italic; /* Opcional: para darle un toque diferente */
+}
 }
