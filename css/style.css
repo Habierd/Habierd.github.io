@@ -1,244 +1,193 @@
-/* Estilos Generales del Cuerpo */
+
+/* Fuente: Montserrat (incluir en HTML) */
 body {
-    font-family: 'Arial', sans-serif; /* Fuente base, puedes cambiarla si prefieres otra legible */
-    text-align: center; /* Centra el contenido principal de la página */
-    margin-top: 0;
-    background-color: #F8F8F8; /* Un blanco roto suave para el fondo de la página */
-    color: #333; /* Un gris oscuro para el texto general, combina con tu logo */
-    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* Encabezado Principal */
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #fff; /* Fondo blanco para el encabezado */
-    border-bottom: 1px solid #eee; /* Línea divisoria suave */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil para profundidad */
+.top-bar, .main-footer {
+  background-color: #333;
+  color: #f8f8f8;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
 }
 
-/* Secciones dentro del encabezado */
-.header-left,
-.header-right,
-.header-center {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centrar contenido dentro de cada sección */
-}
-
-.header-left {
-    justify-content: flex-start; /* Alinear el buscador a la izquierda */
-}
-
-.header-right {
-    justify-content: flex-end; /* Alinear la navegación a la derecha */
-}
-
-/* Barra Superior (Top Bar) */
-.top-bar {
-    background-color: #333; /* Gris oscuro o negro suave para la barra superior */
-    color: #f8f8f8; /* Texto blanco roto */
-    padding: 10px 0;
-    font-size: 0.9em;
-}
-
-/* Barra de Promociones (Promo Bar) */
 .promo-bar {
-    background-color: #eee; /* Un gris claro o blanco para la barra de promociones */
-    padding: 10px 0;
-    font-size: 1em;
-    font-weight: bold;
-    border-bottom: 1px solid #ddd; /* Línea divisoria sutil */
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.promo-bar .promo-link {
-    color: #d1b49f; /* Tu color de acento (rosa palo/terracota) para el enlace de promo */
-    text-decoration: none;
-    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+.promo-link {
+  color: #d1b49f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.promo-bar .promo-link:hover {
-    text-decoration: underline;
-    color: #bb9f8b; /* Tono un poco más oscuro al pasar el mouse */
+.promo-link:hover {
+  color: #bb9f8b;
+  text-decoration: underline;
 }
 
-/* Campo de Búsqueda */
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-left, .header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search-box {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 200px;
 }
 
-/* Identidad de Marca (Logo y Eslogan) */
 .brand-identity {
-    text-align: center; /* Centra el contenido (imagen y párrafo) dentro de este div */
-    /* margin-top y margin-bottom se controlan mejor por el flexbox del .main-header */
-    margin: 0;
+  flex: 1 1 100%;
+  text-align: center;
+  margin: 15px 0;
 }
 
-/* Estilos para la Imagen del Logo */
 .logo {
-    max-width: 300px; /* Ajustado para un mejor centrado. Puedes probar 350px si lo quieres un poco más grande. */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Necesario para que 'margin: 0 auto' funcione y lo centre */
-    margin: 0 auto 5px auto; /* Centrar horizontalmente y añadir un pequeño espacio inferior */
+  max-width: 220px;
+  margin: 0 auto;
 }
 
-/* Estilo para el Eslogan */
 .slogan {
-    font-size: 1.1em; /* Tamaño un poco más grande que el texto normal */
-    color: #555; /* Un gris más suave que el del body, combina con el logo */
-    margin-top: 5px; /* Pequeño espacio encima */
-    margin-bottom: 0;
-    font-style: italic; /* Opcional: para darle un toque diferente */
-    text-align: center; /* Asegurarse de que el texto del eslogan también esté centrado */
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
 }
 
-/* Navegación Principal */
 .main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-nav li {
-    margin-left: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav a {
-    text-decoration: none;
-    color: #333; /* Color oscuro para los enlaces de navegación */
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: #d1b49f; /* Tu color de acento al pasar el mouse */
+  color: #d1b49f;
 }
 
-/* Sección de Productos Destacados */
 .featured-products {
-    padding: 40px 20px;
+  padding: 40px 20px;
 }
 
-/* Títulos de Sección (como "Productos Destacados") */
-h2 {
-    color: #444; /* Un gris más oscuro para los títulos de sección */
-    font-size: 2em;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    text-transform: uppercase; /* Opcional: mayúsculas para los títulos de sección */
-    letter-spacing: 1.5px; /* Espaciado entre letras */
+.featured-products h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
 }
 
-/* Cuadrícula de Productos */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
-    gap: 30px; /* Espacio entre productos */
-    max-width: 1200px; /* Ancho máximo de la cuadrícula */
-    margin: 0 auto; /* Centrar la cuadrícula */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Tarjeta de Producto Individual */
 .product-card {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 15px;
+  width: 100%;
+  border-radius: 6px;
 }
 
 .product-card h3 {
-    font-size: 1.4em;
-    color: #333;
-    margin-bottom: 10px;
+  margin: 15px 0 10px;
 }
 
-.product-card .price {
-    font-size: 1.2em;
-    color: #d1b49f; /* Tu color de acento para los precios */
-    font-weight: bold;
-    margin-bottom: 15px;
+.price {
+  color: #d1b49f;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-/* Botones dentro de las tarjetas de producto */
-.product-card .button {
-    font-size: 0.9em;
-    padding: 8px 15px;
-    border-radius: 4px;
+.add-to-cart {
+  padding: 10px 15px;
+  background-color: #d1b49f;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Pie de Página Principal */
-.main-footer {
-    background-color: #333; /* El mismo gris oscuro de la barra superior */
-    color: #f8f8f8; /* Texto blanco roto */
-    padding: 20px 0;
-    margin-top: 50px;
-    font-size: 0.9em;
+.add-to-cart:hover {
+  background-color: #bb9f8b;
 }
 
-/* Media Queries para Responsividad (Ajustes para pantallas más pequeñas) */
+.cart-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  z-index: 1000;
+  font-size: 0.9em;
+}
+
 @media (max-width: 768px) {
-    .main-header {
-        flex-direction: column; /* Apilar elementos en pantallas pequeñas */
-        padding: 15px 20px;
-    }
+  .main-header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .header-left,
-    .header-right,
-    .header-center {
-        flex: none; /* Desactivar flex-grow */
-        width: 100%; /* Ocupar todo el ancho disponible */
-        justify-content: center; /* Centrar contenido */
-        margin-bottom: 10px; /* Espacio entre secciones */
-    }
+  .header-left, .header-right {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-    .search-box {
-        width: 80%; /* Hacer el buscador más ancho */
-    }
+  .logo {
+    max-width: 180px;
+  }
 
-    .main-nav ul {
-        flex-wrap: wrap; /* Permitir que los ítems de navegación se envuelvan */
-        justify-content: center;
-    }
-
-    .main-nav li {
-        margin: 5px 10px; /* Espacio entre ítems de navegación */
-    }
-
-    .logo {
-        max-width: 200px; /* Reduce el tamaño del logo en móviles */
-    }
-
-    .slogan {
-        font-size: 1em; /* Ajusta el tamaño del eslogan en móviles */
-    }
-
-    h2 {
-        font-size: 1.6em; /* Reduce el tamaño de los títulos en móviles */
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
-        padding: 0 15px;
-    }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

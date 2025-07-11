@@ -1,69 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKlectica: Tu Elección, Tu Victoria</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EKlectica: Tu Elección, Tu Victoria</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <body>
-    <header class="top-bar">
-        <p>🚚 Envío Gratis en compras superiores a $150.000 | 📦 Envíos a todo Colombia</p>
-    </header>
+  <header class="top-bar">
+    <p>🚚 Envío Gratis en compras superiores a $150.000 | 📦 Envíos a todo Colombia</p>
+  </header>
 
-    <nav class="promo-bar">
-        <a href="#" class="promo-link">🔥 ¡Descubre las Rebajas de Verano! Hasta 50% OFF 🔥</a>
-    </nav>
+  <nav class="promo-bar">
+    <a href="#" class="promo-link">🔥 ¡Descubre las Rebajas de Verano! Hasta 50% OFF 🔥</a>
+  </nav>
 
-    <header class="main-header">
-        <div class="header-left">
-            <input type="search" placeholder="Buscar productos..." class="search-box">
-            </div>
-        <div class="header-center">
-        <div class="brand-identity">
-    <img src="images/logo-eklectica.png" alt="Logo de EKlectica" class="logo">
-    <p class="slogan">Tu elección, tu victoria, la moda que mereces.</p>
-</div>
-        <div class="header-right">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Tienda</a></li>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="main-header">
+    <div class="header-left">
+      <input type="search" placeholder="Buscar productos..." class="search-box">
+    </div>
 
-    <main class="featured-products">
-        <h2>Productos Destacados</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x250?text=Producto+1" alt="Producto 1">
-                <h3>Producto Destacado 1</h3>
-                <p class="price">$XX.XXX</p>
-                <button class="add-to-cart">Ver Detalles</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x250?text=Producto+2" alt="Producto 2">
-                <h3>Producto Destacado 2</h3>
-                <p class="price">$XX.XXX</p>
-                <button class="add-to-cart">Ver Detalles</button>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x250?text=Producto+3" alt="Producto 3">
-                <h3>Producto Destacado 3</h3>
-                <p class="price">$XX.XXX</p>
-                <button class="add-to-cart">Ver Detalles</button>
-            </div>
-            </div>
-    </main>
+    <div class="brand-identity">
+      <img src="images/logo-eklectica.png" alt="Logo de EKlectica" class="logo">
+      <p class="slogan">Tu elección, tu victoria, la moda que mereces.</p>
+    </div>
 
-    <footer class="main-footer">
-        <p>&copy; 2025 EKlectica. Todos los derechos reservados.</p>
-    </footer>
-</body>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Novedades</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="featured-products">
+    <h2>Productos Destacados</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x250?text=Producto+1" alt="Producto 1">
+        <h3>Producto Destacado 1</h3>
+        <p class="price">$99.900</p>
+        <button class="add-to-cart" onclick="addToCart('Producto Destacado 1')">Agregar al carrito</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x250?text=Producto+2" alt="Producto 2">
+        <h3>Producto Destacado 2</h3>
+        <p class="price">$120.000</p>
+        <button class="add-to-cart" onclick="addToCart('Producto Destacado 2')">Agregar al carrito</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x250?text=Producto+3" alt="Producto 3">
+        <h3>Producto Destacado 3</h3>
+        <p class="price">$75.000</p>
+        <button class="add-to-cart" onclick="addToCart('Producto Destacado 3')">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="cart-container" id="cart">
+    🛒 Carrito: <span id="cart-count">0</span> productos
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 EKlectica. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    function addToCart(productName) {
+      cartCount++;
+      document.getElementById('cart-count').textContent = cartCount;
+      alert(`Has agregado "${productName}" al carrito.`);
+    }
+  </script>
 </body>
 </html>
