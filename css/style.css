@@ -1,7 +1,7 @@
 /* Estilos Generales del Cuerpo */
 body {
     font-family: 'Arial', sans-serif; /* Fuente base, puedes cambiarla si prefieres otra legible */
-    text-align: center; /* Centra el contenido principal */
+    text-align: center; /* Centra el contenido principal de la página */
     margin-top: 0;
     background-color: #F8F8F8; /* Un blanco roto suave para el fondo de la página */
     color: #333; /* Un gris oscuro para el texto general, combina con tu logo */
@@ -75,17 +75,17 @@ body {
 
 /* Identidad de Marca (Logo y Eslogan) */
 .brand-identity {
-    text-align: center;
-    margin-top: 0; /* Ya lo ajustamos en el main-header */
-    margin-bottom: 0; /* Ya lo ajustamos en el main-header */
+    text-align: center; /* Centra el contenido (imagen y párrafo) dentro de este div */
+    /* margin-top y margin-bottom se controlan mejor por el flexbox del .main-header */
+    margin: 0;
 }
 
 /* Estilos para la Imagen del Logo */
 .logo {
-    max-width: 400px; /* Ajusta este valor al tamaño deseado para tu logo, ej. 250px o 300px */
+    max-width: 300px; /* Ajustado para un mejor centrado. Puedes probar 350px si lo quieres un poco más grande. */
     height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Para que 'margin: 0 auto' lo centre */
-    margin: 0 auto 5px auto; /* Centrar y añadir un pequeño espacio inferior */
+    display: block; /* Necesario para que 'margin: 0 auto' funcione y lo centre */
+    margin: 0 auto 5px auto; /* Centrar horizontalmente y añadir un pequeño espacio inferior */
 }
 
 /* Estilo para el Eslogan */
@@ -93,8 +93,9 @@ body {
     font-size: 1.1em; /* Tamaño un poco más grande que el texto normal */
     color: #555; /* Un gris más suave que el del body, combina con el logo */
     margin-top: 5px; /* Pequeño espacio encima */
-    margin-bottom: 0; /* Se ajusta por el .brand-identity margin */
+    margin-bottom: 0;
     font-style: italic; /* Opcional: para darle un toque diferente */
+    text-align: center; /* Asegurarse de que el texto del eslogan también esté centrado */
 }
 
 /* Navegación Principal */
@@ -241,6 +242,3 @@ h2 {
         padding: 0 15px;
     }
 }
-
-/* @media (max-width: 480px) {
-    /* Aquí podrías añadir ajustes aún más específicos para teléfonos muy pequeños, si es necesario */
